@@ -1,12 +1,43 @@
 [variables]
 main_domain = "${domain}"
-directus_secret = "${base64:64}"
-database_password = "${password}"
+secret = "${base64:64}"
+admin_email = "${email}"
+admin_password = "${password}"
+db_client = "mysql"
+db_host = "62.72.44.73"
+db_port = "3306"
+db_database = ""
+db_user = ""
+db_password = ""
+storage_locations = "s3"
+storage_s3_driver = "s3"
+storage_s3_root = "directus"
+storage_s3_key = "454bed56d22285393605"
+storage_s3_secret = "91rJTz9K/aOWYdX17v87ggGSHTCUJWN2UMcJ0UPA"
+storage_s3_bucket = ""
+storage_s3_region = "idn"
+storage_s3_endpoint = "nos.wjv-1.neo.id"
+
 
 [config]
 env = [
-  "DATABASE_PASSWORD=${database_password}",
-  "DIRECTUS_SECRET=${directus_secret}",
+  "SECRET=${secret}",
+  "ADMIN_EMAIL=${admin_email}",
+  "ADMIN_PASSWORD=${admin_password}",
+  "DB_CLIENT=${db_client}",
+  "DB_HOST=${db_host}",
+  "DB_PORT=${db_port}",
+  "DB_DATABASE=${db_database}",
+  "DB_USER=${db_user}",
+  "DB_PASSWORD=${db_password}",
+  "STORAGE_LOCATIONS=${storage_locations}",
+  "STORAGE_S3_DRIVER=${storage_s3_driver}",
+  "STORAGE_S3_ROOT=${storage_s3_root}",
+  "STORAGE_S3_KEY=${storage_s3_key}",
+  "STORAGE_S3_SECRET=${storage_s3_secret}",
+  "STORAGE_S3_BUCKET=${storage_s3_bucket}",
+  "STORAGE_S3_REGION=${storage_s3_region}",
+  "STORAGE_S3_ENDPOINT=${storage_s3_endpoint}",
 ]
 mounts = []
 
